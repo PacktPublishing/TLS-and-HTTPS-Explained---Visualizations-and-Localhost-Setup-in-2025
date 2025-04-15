@@ -1,0 +1,17 @@
+Part 1: Using XCA and Live Server to spin up a localhost server over HTTPS/TLS
+Part 1
+In this section, you'll discover how to create a localhost server that runs over HTTPS using XCA and Live Server.
+
+Here's what you'll learn:
+
+Create a Certificate Authority (CA): To run an HTTPS server, you need an entity to sign your server's certificate. We'll create a CA using XCA (this involves creating a "self-signed" certificate for your CA)
+
+Generate Certificates: next, you'll learn how your CA can sign a TLS certificate for localhost. This involves your server first creating a Certificate Signing Request (CSR) file, which your CA can then sign.
+
+Configure Live Server: once we have all of our files, we can then set up a .vscode folder with a settings.json file to configure Live Server to use your certificates and run over HTTPS.
+
+Access Your Site: proof is in the pudding 🍰, so the final step is to visit https://localhost:4430 in your browser to securely access your site.
+
+Inspect with Wireshark: Finally, you'll use Wireshark to examine your secure connection and ensure everything is working as expected.
+
+(FYI: Live Server defaults to HTTP/1.1 unless explicitly configured for HTTP/2. This is absolutely fine for our course. By the way, not many developers know that you can still achieve a secure HTTPS connection using HTTP/1.1 over TLS)

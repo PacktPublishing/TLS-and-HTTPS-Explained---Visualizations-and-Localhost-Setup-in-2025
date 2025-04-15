@@ -1,0 +1,14 @@
+What does the client actually check on the certificate?
+In reality, your browser will check a few things on the server's signed certificate 📰.
+
+For example:
+
+The client will first check the certificate's validity period to ensure it is still active.
+
+Next, it verifies that the certificate was issued by a trusted Certificate Authority (CA) by checking the CA's signature against its public key. The client uses the CA's public key to validate the digital signature on the certificate, confirming its authenticity (this is what we covered in the previous lecture).
+
+Finally, it ensures that the domain name on the certificate matches the server's domain to establish a secure connection.
+
+After these checks are done, and if all is well, the browser will not display any warning messages to you, and the TLS handshake process can continue (more on this soon).
+
+(by the way, can you begin to see how important it is that the browser you're using is "clued up" on security measures?)

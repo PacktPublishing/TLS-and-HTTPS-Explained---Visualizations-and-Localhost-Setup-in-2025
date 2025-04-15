@@ -1,0 +1,7 @@
+Summary of the hybrid key exchange mechanism in TLS 1.3
+This is all I would like you to gain from the previous lecture: 
+
+Hybrid key exchange uses both classical algorithms (e.g., ECDH) and post-quantum algorithms (e.g., Kyber, Dilithium) to enhance security.
+
+The National Institute of Standards and Technology (NIST) has developed advanced crypto techniques, such as key encapsulation mechanisms (KEMs), to enhance security against quantum threats.
+

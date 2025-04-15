@@ -1,0 +1,19 @@
+Part 3: Create a Node server to run a localhost server over HTTPS and TLS
+Part 3
+In this last part (sad face as we are approaching the end of the course 😔) you'll discover how to create a Node.js localhost server that runs over HTTPS and TLS.
+
+Here's what you'll learn:
+
+Set up a Node server: you'll learn how to create a Node custom server, from scratch.
+
+Import modules: I'll show you how to import modules like https, fs, express and mkcert.
+
+Create a Certificate Authority (CA): To run an HTTPS server, you need an entity to sign your server's certificate. We'll create a CA using Node's mkcert package.
+
+Generate Certificates: next, you'll learn how to create the keys and final certificates for localhost using mkcert.
+
+Access Your Site: Visit https://localhost:4430 in your browser to securely access your Node site.
+
+
+
+(FYI: similar to Live Server, a Node server also defaults to HTTP/1.1 unless explicitly configured for HTTP/2 or HTTP/3)

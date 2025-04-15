@@ -1,0 +1,2 @@
+Certificate Signing Request (CSR)
+To request a certificate for HTTPS, a server generates a Certificate Signing Request (CSR). This CSR includes the server's public key and identifying information, such as the domain name and organization details. The CSR is then sent to a Certificate Authority (CA), which verifies the information and, if everything checks out, issues a digital certificate that binds the server's identity to its public key, enabling secure communication over the internet.

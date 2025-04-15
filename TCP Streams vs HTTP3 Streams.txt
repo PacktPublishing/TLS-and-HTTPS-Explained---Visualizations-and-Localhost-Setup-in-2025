@@ -1,0 +1,29 @@
+TCP Streams vs. HTTP/3 Streams
+I know ... these concepts can be confusing. 🥴
+
+warthog standing in a stream, with TCP and HTTP/3 signs
+Let me help clarify the differences between TCP streams and HTTP/3 (UDP) streams.
+
+TCP Streams:
+
+TCP establishes a single connection for data transmission, where the data is sent as a continuous stream. This means that all data sent over a TCP connection is treated as one large stream, which can be segmented into smaller packets for transmission.
+
+While TCP can handle multiple connections (and thus multiple streams) to the same server, these are separate connections rather than independent streams within a single connection. If one connection experiences delays or issues, it does not affect the others.
+
+
+
+HTTP/3 Streams:
+
+In contrast, HTTP/3 allows multiple streams to exist simultaneously within a single QUIC connection. Each stream can carry its own set of data independently. This means that if one stream encounters delays or packet loss, it does not block or impact the delivery of other streams.
+
+This design eliminates head-of-line blocking, which is a limitation in TCP where delays in one packet can hold up all subsequent packets in the same connection.
+
+👉 As a result, HTTP/3 can provide better performance and responsiveness in scenarios with varying network conditions.
+
+Conclusion
+While both TCP and HTTP/3 utilize streams, the key difference lies in how they manage those streams.
+
+TCP streams are dependent on the state of the single connection and can be affected by issues within that connection.
+
+In contrast, HTTP/3's independent streams allow for more robust and efficient data transfer, making it less susceptible to performance degradation due to issues affecting other streams. This independence enhances the overall user experience in web applications using HTTP/3.
+
